@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>AboutBrowser Settings</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="settings.css">
+    <script src="settings.js"></script>
+    <script src="/browser-api-tab.js"></script>
+    <link href="dark-theme.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="init();">
+    <div class="container containerPadding">
+        <h1>AboutBrowser Settings</h1>
+        <settings>
+            <setting id="startUrl">
+                <settingTitle>
+                    <div>
+                        <div class="pleasecenter">Start URL: </div>
+                    </div> <input type="text">
+                </settingTitle>
+                Start URL used when creating a new tab.
+                <settingStatus></settingStatus>
+                <hr>
+            </setting>
+            <setting id="searchEngineUrl">
+                <settingTitle>
+                    <div>
+                        <div class="pleasecenter">Search Engine URL: </div>
+                    </div> <input type="text">
+                </settingTitle>
+                Search Engine URL used when searching.
+                <settingStatus></settingStatus>
+                <hr>
+            </setting>
+            <setting id="pr0xy">
+                <settingTitle>
+                    <div>
+                        <div class="pleasecenter">Pr0xy: </div>
+                    </div>
+                    <select name="Pr0xy" id="pr0xyselector">
+                        <option value="DIP">Dynamic Interception Pr0xy</option>
+                        <option value="UV">Ultraviolet</option>
+                    </select>
+                </settingTitle>
+                Pr0xy used to pr0xy URLs.
+                <settingStatus></settingStatus>
+                <hr>
+            </setting>
+            <setting id="resetSettings">
+                <settingTitle>
+                    <button onclick="resetAllSettings();">RESET ALL SETTINGS</button>
+                </settingTitle>
+                RESET ALL settings to defaults.
+                <hr>
+            </setting>
+        </settings>
+    </div>
+</body>
+
+</html>
